@@ -20,7 +20,6 @@ public class No1TwoSum{
 
 
 // 哈希表法
-
     public static int[] twoSum2(int[] nums, int target) {
         int len = nums.length;
         int result[] = new int[2];
