@@ -1,6 +1,6 @@
 import java.util.HashMap;
 
-// 暴力破解
+// 暴力破解法
 public class No1TwoSum{
     public int[] twoSum1(int[] nums, int target) {
         int len = nums.length;
