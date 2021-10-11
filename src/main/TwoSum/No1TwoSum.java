@@ -1,3 +1,4 @@
+package src.main.TwoSum;
 import java.util.HashMap;
 
 // 暴力破解法
