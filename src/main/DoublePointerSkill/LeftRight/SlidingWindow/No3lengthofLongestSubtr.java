@@ -1,4 +1,4 @@
-package src.main.DoublePointerSkill.LeftRight;
+package src.main.DoublePointerSkill.LeftRight.SlidingWindow;
 import java.util.HashSet;
 import java.util.Set;
 
