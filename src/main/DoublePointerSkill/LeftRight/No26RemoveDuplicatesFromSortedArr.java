@@ -9,14 +9,14 @@ public class No26RemoveDuplicatesFromSortedArr {
         // 区间为【0,j) 左闭右开区间
         int j = 1;
         // j表示要赋值的元素的下标
-        int pre = nums[0];
+        // int pre = nums[0];
         for (int i = 1; i < len; i++){
             // 因为pre是第一个数，一定不会重复，所以i可以从1开始
-            if (nums[i] != pre){
-                nums[j] = nums[i];
-                pre = nums[j];
+            if (nums[j] != nums[i]){
+                nums[j++] = nums[i];
+                // pre = nums[j];
                 // pre永远指向第一个不重复的数
-                j++;
+                // j++;
 
             }
         }
@@ -48,7 +48,7 @@ public class No26RemoveDuplicatesFromSortedArr {
 
 
     public static void main (String[] args){
-        int[] nums1 = {1,1,2};
+        int[] nums1 = {1,1,2,2,3};
         System.out.println(removeDuplicates1(nums1));
 
         int[] nums2 = {0,0,1,1,2,3,4,4,5,6,6};
