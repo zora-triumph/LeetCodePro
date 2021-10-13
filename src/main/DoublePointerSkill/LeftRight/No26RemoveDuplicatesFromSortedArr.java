@@ -1,7 +1,7 @@
 package src.main.DoublePointerSkill.LeftRight;
 
 public class No26RemoveDuplicatesFromSortedArr {
-    public static int removeDuplicates(int[] nums) {
+    public static int removeDuplicates1(int[] nums) {
         int len = nums.length;
         if (len < 2){
             return len;
@@ -24,11 +24,35 @@ public class No26RemoveDuplicatesFromSortedArr {
         return j;
         
     }
+    public static int removeDuplicates2(int[] nums) {
+        int len = nums.length;
+        if (len < 2){
+            return len;
+        }
+        // 采用区间为[0,j] 闭区间
+        int j = 0;
+        for (int i = 1; i < len; i++){
+            if (nums[i] != nums[j]){
+                // j++;
+                // 注意：此处应该是先移动j指针再赋值
+                nums[++j] = nums[i];
+                
+            }
+        }
+
+        return j+1;
+        // 因为j=0的时候，就已经有一个数
+        
+    }
+
+
 
     public static void main (String[] args){
-        int[] nums = {1,1,2};
-        System.out.println(removeDuplicates(nums));
+        int[] nums1 = {1,1,2};
+        System.out.println(removeDuplicates1(nums1));
 
+        int[] nums2 = {0,0,1,1,2,3,4,4,5,6,6};
+        System.out.println(removeDuplicates2(nums2));
         /*
         Input: nums = [1,1,2]
         Output: 2, nums = [1,2,_]
