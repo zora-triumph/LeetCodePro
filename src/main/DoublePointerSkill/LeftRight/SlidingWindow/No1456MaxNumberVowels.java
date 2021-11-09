@@ -1,7 +1,5 @@
 package src.main.DoublePointerSkill.LeftRight.SlidingWindow;
 
-import java.io.CharArrayReader;
-
 public class No1456MaxNumberVowels {
      // 滑动窗口
     public static int maxVowels1(String s, int k) {
